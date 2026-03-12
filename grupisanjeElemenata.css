@@ -1,0 +1,134 @@
+:root {
+    background-color: black;
+    color: greenyellow;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header{
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+}
+.navmenu{
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    color: greenyellow;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+}
+.navmenu ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.navmenu a{
+    text-decoration: none;
+    transition: 0.3s;
+    color: black;
+}
+.navmenu a:hover{
+    color: white;
+}
+main{
+    align-items: left;
+    text-align: left;
+    text-decoration: none;
+    font-size: 20px;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.logoAkademije{
+   margin-left: 0px;
+   display: block;
+}
+html{
+    scroll-behavior: smooth;
+}
+#o-meni {
+    scroll-margin-top: 50px;
+    padding: 20px;
+}
+.galerija {
+    display: flex;         
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; 
+    padding: 20px 0;
+}
+.galerija img {
+    width: 150px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.galerija img.bojana-lezi-na-mostu{
+    width: 800px;
+    height: 500px;
+    order: 1;
+}
+.galerija img.sanja-landscape{
+    width: 800px;
+    height: 500px;
+    order: 2;
+}
+.galerija img.bojana-naslonjena-na-most{
+    width: 300px;
+    height: 500px;
+    order: -1;
+}
+.galerija img.bojana-drzi-jaketu{
+    width: 300px;
+    height: 500px;
+}
+.galerija img.bojana-nasmejana{
+    width: 300px;
+    height: 500px;
+}
+.galerija img.bojana-kod-ringispila-roze{
+    width: 300px;
+    height: 500px;
+}
+.galerija img.bojana-namestena{
+    width: 300px;
+    height: 500px;
+}
+.galerija img.bojana-namestena-opet{
+    width: 300px;
+    height: 500px;
+}
+.galerija img.vikica-skola-ledja{
+    width: 300px;
+    height: 500px;
+}
+.galerija img.vikica-pesacki{
+    width: 300px;
+    height: 500px;
+}
+.galerija img.sanjica-na-stepenicama{
+     width: 300px;
+    height: 500px;
+}
+.galerija img.sanjica-na-stepenicama-sedi{
+     width: 300px;
+    height: 500px;
+}
+.galerija img.bojana-pali-cigaru{
+    width: 800px;
+    height: 500px;
+    order: 3;
+}
