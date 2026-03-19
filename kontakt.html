@@ -38,13 +38,32 @@
                         <h1 class="text-neon mb-4 fw-bold display-4">Stupimo u Kontakt</h1>
                         <p class="fs-5 mb-5 text-secondary">Ukoliko želite da razgovaramo povodom potencijalnih projekata, saradnje, ili imate bilo kakva pitanja za mene, slobodno mi pišite!</p>
                         
-                        <a href="mailto:lukamatic14.03@icloud.com" class="btn btn-neon btn-lg w-100 py-3 fs-4 d-flex justify-content-center align-items-center gap-2">
+                        <a href="mailto:lukamatic14.03@icloud.com" class="btn btn-neon btn-lg w-100 py-3 fs-4 d-flex justify-content-center align-items-center gap-2 mb-5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
                                 <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
                                 <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-1.52c0-.845.482-1.369 1.157-1.369.314 0 .61.12.8.315h.043v-.93h1.848v3.134Zm-2.85-1.516c0 .463.196.845.52.845.315 0 .524-.383.524-.848v-.812c0-.462-.209-.85-.525-.85-.315 0-.52.383-.52.845v.82Z"/>
                             </svg>
                             lukamatic14.03@icloud.com
                         </a>
+
+                        <hr class="border-secondary my-5">
+                        <h3 class="text-neon mb-4 fw-bold">Ili ostavite poruku</h3>
+                        <form action="https://formsubmit.co/lukamatic14.03@icloud.com" method="POST" class="text-start">
+                            <input type="hidden" name="_captcha" value="false">
+                            <div class="mb-3">
+                                <label for="ime" class="form-label text-light fs-5">Ime i prezime</label>
+                                <input type="text" name="Ime" class="form-control bg-dark text-light border-secondary p-3" id="ime" placeholder="Vaše ime" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-light fs-5">Email adresa</label>
+                                <input type="email" name="Email" class="form-control bg-dark text-light border-secondary p-3" id="email" placeholder="Vaš email" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="poruka" class="form-label text-light fs-5">Poruka</label>
+                                <textarea name="Poruka" class="form-control bg-dark text-light border-secondary p-3" id="poruka" rows="5" placeholder="Napišite nešto..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-neon btn-lg w-100 py-3 fs-3 fw-bold">Pošalji poruku</button>
+                        </form>
                     </div>
                 </div>
             </div>

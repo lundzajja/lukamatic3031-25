@@ -172,8 +172,18 @@ body {
 
 @media (max-width: 768px) {
     .custom-img, .custom-img.img-large, .custom-img.img-grafika {
-        width: 100% !important;
         max-width: 450px !important;
         height: auto !important;
     }
+}
+
+.form-control {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--dark-bg);
+    color: white;
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(137, 204, 4, 0.4);
 }
