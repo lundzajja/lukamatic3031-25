@@ -1,89 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grupisanje sadrzaja na web stranici</title>
+    <title>Početak - Luka Matić</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="grupisanjeElemenata.css" rel="stylesheet">
 </head>
 <body>
-    <!-- header -->
-     <header class="header">
-    <a href="https://va.akademijazs.edu.rs/">
-    <img src="9-Akademija-logo-sivi.png"
-    alt="Akademija strukovnih studija Zapadna Srbija Odsek Valjevo"
-    height="150px"
-    width="150px"
-    title="Primer iz vezbe predmeta Web dizajn"
-    align="left"></a>
-    <h1>Luka Matić 3031/25</h1>
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-neon fw-bold fs-3" href="grupisanjeElemenata.html">Luka Matić</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="grupisanjeElemenata.html">Početak & O meni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galerija.html">Galerija</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center py-5 fade-in">
+        <div class="container py-5 my-3 rounded neon-box bg-dark custom-bg-pattern">
+            <a href="https://va.akademijazs.edu.rs/">
+                <img src="9-Akademija-logo-sivi.png" alt="Akademija" class="logo-img mb-4 fade-in delay-1" height="120">
+            </a>
+            <h1 class="display-2 fw-bold text-neon fade-in delay-2">Luka Matić <span class="fs-4 text-light">3031/25</span></h1>
+            <p class="lead fade-in delay-3 fs-3 text-secondary">Student Informacionih tehnologija i računarske grafike</p>
+        </div>
     </header>
-    <!-- navigaciona traka -->
-     <nav class="navmenu">
-           <a href= "#">Početak</a>
-           <a href="#o-nama">O meni</a>
-           <a href="#projekti">Galerija</a>
-           <a href="#">Kontakt</a>
-     </nav>
-     <br>
-     <br>
-     <br>
-     <br>
-     <!-- glavni sadrzaj stranice -->
-    <main>
-        <section>
-            <article class="article">
-                <h1>Ko sam ja?</h1>
-                <p>Ja sam Luka, student na Akademiji Strukovnih Studija zapadna Srbija Odsek Valjevo, smer Informacione tehnologije i računarska grafika.</p>
-                <p>
-            </article>
-        </section>
-    <!-- traka sa strane -->
-     <!-- <aside class="bocnaTraka">
-    <h2>Povezani clanci</h2> -->
-    <a class="O-skoli" href="https://akademijazs.edu.rs/o-akademiji/"><h1>Istorija škole</h1></a>
-    <p>Akademija strukovnih studija Zapadna Srbija osnovana je kao novo pravno lice Odlukom Vlade Republike Srbije 29.08.2019. godine i to statusnom promenom spajanja visokoškolskih ustanova. Visoke škole strukovnih studija Užice iz Užica i Visoke poslovne škole strukovnih studija iz Valjeva.</p>
-    <p>Opsirnije možete pročitati tako što ćete kliknuti na <a href="https://akademijazs.edu.rs/o-akademiji/">link</a></p>
-    <!-- <a href="O KUMu">O Kolubarskom udruzenju mladih</a> -->
-     </aside>
+
+    <main class="container my-5">
+        <div class="row align-items-center mb-5 slide-up">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="text-neon mb-4 fw-bold display-5">Ko sam ja?</h2>
+                <p class="fs-4 lh-base text-light">Ja sam Luka, student na Akademiji Strukovnih Studija Zapadna Srbija Odsek Valjevo, smer Informacione tehnologije i računarska grafika.</p>
+                <p class="fs-5 text-secondary">Završio sam za turističko-hotelijerskog tehničara, međutim oduvek sam voleo tehnologiju i programiranje. U tom sam svetu još od malih nogu i shodno tome sam upisao Akademiju kako bih usavršavao svoje veštine.</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="neon-box p-5 rounded bg-black h-100 d-flex flex-column justify-content-center">
+                    <h4 class="text-neon fs-3 mb-3">Zanimanje</h4>
+                    <p class="fs-5 mb-0 text-white">Web Programiranje<br><span class="text-neon">+</span><br>Analiza Podataka (MySQL)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5 slide-up">
+            <div class="col-lg-12">
+                <h2 class="text-neon mb-4">Nešto više o meni</h2>
+                <div class="card bg-black border-neon p-5 neon-box text-light fs-5 lh-lg">
+                    <p>Zaposlen sam u <strong>Maxiju</strong>, sa preko dve godine radnog iskustva (radim kao omladinac).</p>
+                    <p class="mb-0">U slobodno vreme volim da fotografišem prijatelje (zato me nećete videti ispred objektiva, nego uvek iza), slušam muziku, ostavljam recenzije na <a class="text-neon fw-bold custom-link" href="https://musicboard.com/user/lukamercedez" target="_blank">Musicboard-u</a>, da gledam filmove i ostavljam recenzije na <a class="text-neon fw-bold custom-link" href="https://letterboxd.com/lukamercedez/" target="_blank">Letterboxd-u</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 slide-up">
+            <aside class="col-12 p-5 bg-dark rounded border-neon neon-box text-center">
+                <h3 class="mb-4"><a class="text-neon custom-link display-6 fw-bold" href="https://akademijazs.edu.rs/o-akademiji/">Istorija Akademije</a></h3>
+                <p class="fs-5 text-secondary w-75 mx-auto">Akademija strukovnih studija Zapadna Srbija osnovana je kao novo pravno lice Odlukom Vlade Republike Srbije 29.08.2019. godine i to statusnom promenom spajanja visokoškolskih ustanova: Visoke škole strukovnih studija Užice iz Užica i Visoke poslovne škole strukovnih studija iz Valjeva.</p>
+            </aside>
+        </div>
     </main>
-     <section id="o-meni">
-        Završio sam za turističko-hotelijerskog tehničara, medjutim oduvek sam voleo tehnologiju i programinje. U tom sam svetu još od malih nogu i shodno tome sam upisao Akadmiju Strukovnih Studija.</p>
-                <p>Zaposlen sam u Maxiju, sa preko dve godine radnog iskustva. Radim kao omladinac. Jako me zanima web programiranje i analiza podataka(MySQL).</p>
-<p>U slobodno vreme volim da fotografišem prijatelje (zato me nećete videti ispred objektiva, nego uvek iza), slušam muziku, ostavljam recenzije na Musicboard i da gledam filmove i ostavljam recenzije na <a class="letterboxd" href="https://letterboxd.com/lukamercedez/" target="_blank">Letterboxd.</a></p>    </section>
-    <section id="projekti">
-        <h2>Moji Projekti</h2>
-    <p>Ovde se nalaze fotografije koje sam ja zabeležio:</p>
-    
-    <div class="galerija">
-        <img src="1.jpeg" class="bojana-naslonjena-na-most" alt="Moja fotografija 1">
-        <img src="2.jpeg" class="bojana-lezi-na-mostu" alt="Moja fotografija 2">
-        <img src="3.jpeg" class="bojana-drzi-jaketu" alt="Moja fotografija 3">
-        <img src="4.jpeg" class="bojana-nasmejana" alt="Moja fotografija 4">
-        <img src="5.jpeg" class="bojana-kod-ringispila-roze" alt="Moja fotografija 5">
-        <img src="7.jpeg" class="bojana-namestena" alt="Moja fotografija 7">
-        <img src="8.jpeg" class="bojana-namestena-opet" alt="Moja fotografija 8">
-        <img src="9.jpeg" class= "vikica-skola-ledja" alt="Moja fotografija 9">
-        <img src="10.jpeg" class="vikica-pesacki" alt="Moja fotografija 10">
-        <img src="11.jpeg" class="bojana-pali-cigaru" alt="Moja fotografija 11">
-        <img src="12.jpeg" class="sanja-landscape" alt="Moja fotografija 12">
-        <img src="13.jpeg" class="sanjica-na-stepenicama" alt="Moja fotografija 13">
-        <img src="14.jpeg" class="sanjica-na-stepenicama-sedi" alt="Moja fotografija 14">
-    </div>
-    </section>
-    <!-- podnozje veb stranice -->
-     <footer class="footer">
-        <p>&copy;Copyright 2026 by Predmet Web dizajn u vlasnistvu Akademije strukovnih studija zapadna srbija odsek Valjevo</p>
-        <br>
-         <a href="https://va.akademijazs.edu.rs/">
-        <img src="9-Akademija-logo-sivi.png" class="logoAkademije"
-         height="150px"
-        width="150"
-        align="center">
-        </a>
-        <br>
-        <br><tag class="tag">Akademija Strukovnih Studija zapadna Srbija odsek Valjevo</tag>
-     </footer>
-   
+
+    <footer class="footer mt-auto py-5 border-top border-neon text-center bg-black">
+        <div class="container">
+            <a href="https://va.akademijazs.edu.rs/" class="d-inline-block mb-3 logo-hover">
+                <img src="9-Akademija-logo-sivi.png" height="80" alt="Logo">
+            </a>
+            <p class="text-neon mb-1 fs-5">Primer iz vežbe predmeta Web Dizajn</p>
+            <p class="small text-secondary mb-0">&copy; 2026 Akademija strukovnih studija Zapadna Srbija odsek Valjevo</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
