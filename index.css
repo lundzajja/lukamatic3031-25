@@ -188,3 +188,17 @@ body {
     border-color: var(--neon-green);
     box-shadow: 0 0 10px rgba(137, 204, 4, 0.4);
 }
+
+.custom-poster {
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.custom-album {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
