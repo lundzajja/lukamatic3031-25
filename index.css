@@ -9,8 +9,8 @@
 body {
     background-color: var(--dark-bg) !important;
     color: #e0e0e0;
-    font-family: 'Outfit', system-ui, -apple-system, sans-serif !important;
-    font-weight: 300;
+    font-family: 'Jost', system-ui, -apple-system, sans-serif !important;
+    font-weight: 300 !important;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
