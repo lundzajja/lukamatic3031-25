@@ -1,9 +1,12 @@
 
-
 :root {
     --neon-green: #89CC04;
     --dark-bg: #050505;
     --darker-bg: #000000;
+}
+
+html {
+    overflow-x: clip;
 }
 
 body {
@@ -13,6 +16,7 @@ body {
     font-weight: 300 !important;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 ::selection {
@@ -39,7 +43,7 @@ body {
 
 .custom-link {
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .custom-link:hover {
@@ -48,7 +52,7 @@ body {
 }
 
 .logo-hover {
-    transition: 0.3s transform ease;
+    transition: transform 0.3s ease;
 }
 
 .logo-hover:hover {
@@ -56,11 +60,11 @@ body {
 }
 
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(137, 204, 4, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     padding: 1rem 0;
 }
 
@@ -68,7 +72,7 @@ body {
     color: #aaaaaa !important;
     font-weight: 600;
     font-size: 1.1rem;
-    transition: 0.3s ease;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -81,13 +85,13 @@ body {
 .neon-box {
     border: 1px solid rgba(137, 204, 4, 0.2);
     box-shadow: 0 0 15px rgba(137, 204, 4, 0.05);
-    transition: all 0.4s ease;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .neon-box:hover {
     box-shadow: 0 0 25px rgba(137, 204, 4, 0.2);
     border-color: rgba(137, 204, 4, 0.7);
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .btn-neon {
@@ -96,7 +100,7 @@ body {
     border: 2px solid var(--neon-green);
     border-radius: 8px;
     font-weight: bold;
-    transition: 0.3s all;
+    transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .btn-neon:hover {
@@ -106,54 +110,52 @@ body {
     transform: translateY(-3px);
 }
 
+/* ── Gallery grid ── */
 .galerija-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
 .custom-img {
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border 0.4s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
-    width: 240px;
-    height: 400px;
+    width: 100%;
+    height: auto;
     border: 2px solid transparent;
+    display: block;
 }
 
 .custom-img.img-large {
-    width: 640px;
-    height: 400px;
+    grid-column: span 2;
 }
 
 .custom-img.img-grafika {
-    width: 400px;
-    height: 400px;
     object-fit: contain;
     background-color: rgba(255, 255, 255, 0.05);
     padding: 15px;
 }
 
 .custom-img:hover {
-    transform: scale(1.08) translateY(-10px);
-    box-shadow: 0 15px 30px rgba(137, 204, 4, 0.2);
+    transform: scale(1.04) translateY(-6px);
+    box-shadow: 0 12px 28px rgba(137, 204, 4, 0.2);
     border-color: var(--neon-green);
     z-index: 10;
     position: relative;
 }
 
+/* ── Scroll animations ── */
 .fade-in {
     opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
+    animation: fadeIn 1s ease forwards;
 }
 
 .slide-up {
     opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
 .slide-up.visible {
@@ -171,33 +173,9 @@ body {
     to { opacity: 1; }
 }
 
-@media (max-width: 768px) {
-    .custom-img, .custom-img.img-large, .custom-img.img-grafika {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    .galerija-grid {
-        gap: 12px;
-    }
-}
-
-@media (max-width: 576px) {
-    .display-2 { font-size: 2.2rem !important; }
-    .display-3 { font-size: 2rem !important; }
-    .display-4 { font-size: 1.8rem !important; }
-
-    .navbar-nav {
-        gap: 0 !important;
-    }
-    .navbar-nav .nav-link {
-        padding: 0.5rem 0;
-    }
-}
-
+/* ── Form ── */
 .form-control {
-    transition: all 0.3s ease;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .form-control:focus {
@@ -207,16 +185,65 @@ body {
     box-shadow: 0 0 10px rgba(137, 204, 4, 0.4);
 }
 
+/* ── Cards: film / album ── */
 .custom-poster {
     aspect-ratio: 2/3;
     object-fit: cover;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .custom-album {
     aspect-ratio: 1/1;
     object-fit: cover;
     width: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ── Tablet ── */
+@media (max-width: 768px) {
+    .galerija-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .custom-img.img-large {
+        grid-column: span 2;
+    }
+
+    .custom-img.img-grafika {
+        grid-column: span 2;
+    }
+
+    .custom-navbar {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background-color: rgba(0, 0, 0, 0.97);
+    }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+    .galerija-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .custom-img,
+    .custom-img.img-large,
+    .custom-img.img-grafika {
+        grid-column: span 1 !important;
+    }
+
+    .display-2 { font-size: 2.2rem !important; }
+    .display-3 { font-size: 2rem !important; }
+    .display-4 { font-size: 1.8rem !important; }
+
+    .navbar-nav {
+        gap: 0 !important;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
 }
