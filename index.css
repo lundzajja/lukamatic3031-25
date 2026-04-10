@@ -1,21 +1,22 @@
 
 :root {
     --neon-green: #89CC04;
-    --dark-bg: #050505;
+    --dark-bg: #000000;
     --darker-bg: #000000;
 }
 
 html {
     overflow-x: clip;
+    background-color: var(--dark-bg) !important;
 }
 
 body {
     background-color: var(--dark-bg) !important;
+    min-height: 100vh;
     color: #e0e0e0;
     font-family: 'Jost', system-ui, -apple-system, sans-serif !important;
     font-weight: 300 !important;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     max-width: 100%;
 }
 
@@ -60,7 +61,7 @@ body {
 }
 
 .custom-navbar {
-    background-color: rgba(0, 0, 0, 0.92);
+    background-color: rgb(0, 0, 0);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(137, 204, 4, 0.3);
