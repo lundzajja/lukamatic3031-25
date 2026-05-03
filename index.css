@@ -118,19 +118,31 @@ body {
     gap: 16px;
 }
 
-.custom-img {
+.img-wrap {
+    position: relative;
     border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid transparent;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-wrap:hover {
+    transform: scale(1.04) translateY(-6px);
+    z-index: 10;
+    border-color: var(--neon-green);
+    box-shadow: 0 12px 28px rgba(137, 204, 4, 0.2);
+}
+
+.img-wrap.img-large {
+    grid-column: span 2;
+}
+
+.custom-img {
     cursor: pointer;
     width: 100%;
     height: auto;
-    border: 2px solid transparent;
     display: block;
-}
-
-.custom-img.img-large {
-    grid-column: span 2;
 }
 
 .custom-img.img-grafika {
@@ -139,12 +151,37 @@ body {
     padding: 15px;
 }
 
-.custom-img:hover {
-    transform: scale(1.04) translateY(-6px);
-    box-shadow: 0 12px 28px rgba(137, 204, 4, 0.2);
-    border-color: var(--neon-green);
-    z-index: 10;
-    position: relative;
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.82));
+    padding: 28px 12px 10px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.img-wrap:hover .img-overlay {
+    opacity: 1;
+}
+
+.overlay-camera {
+    color: var(--neon-green);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.overlay-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    font-weight: 300;
 }
 
 /* ── Scroll animations ── */
@@ -208,11 +245,11 @@ body {
         gap: 10px;
     }
 
-    .custom-img.img-large {
+    .img-wrap.img-large {
         grid-column: span 2;
     }
 
-    .custom-img.img-grafika {
+    .img-wrap.img-grafika-wrap {
         grid-column: span 2;
     }
 
@@ -230,9 +267,9 @@ body {
         gap: 10px;
     }
 
-    .custom-img,
-    .custom-img.img-large,
-    .custom-img.img-grafika {
+    .img-wrap,
+    .img-wrap.img-large,
+    .img-wrap.img-grafika-wrap {
         grid-column: span 1 !important;
     }
 
